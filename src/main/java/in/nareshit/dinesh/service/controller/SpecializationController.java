@@ -19,7 +19,25 @@ public class SpecializationController {
 	private ISpecializationService service;
 	
 	/*
-	 * 1 display all Specialization
+	 * 1 Show Register page
+	 */
+	
+	@GetMapping("/register")
+	public String displayRegister()
+	{
+		
+		return "SpecializationRegister";
+	}
+	
+	/*
+	 * 2 on Submit form save data
+	 */
+	 
+	
+	
+	
+	/*
+	 * 3 display all Specialization
 	 */
 	
 	@GetMapping("/all")
