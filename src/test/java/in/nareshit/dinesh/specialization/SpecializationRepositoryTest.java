@@ -31,42 +31,27 @@ public class SpecializationRepositoryTest {
 	
 	
 	/**
-	 * 
 	 * 1. Test save operation
-	 * 
 	 */
-
-	@Disabled
 	@Test
 	@Order(1)
-	public void testSpecCreate()
-	{
-		Specialization spec = new Specialization(null,"CRDLS","Cardiologists","They're expert");
-		spec =  repo.save(spec);
+	public void testSpecCreate() {
+		Specialization spec = new Specialization(null, "CRDLS", "Cardiologists", "They’re experts on the heart and blood vessels.");
+		spec = repo.save(spec);
 		assertNotNull(spec.getId(),"Spec is not created!");
-		
-		
 	}
 
-	/**
-	 * 
-	 * 1. Test save operation
-	 * 
-	 */
-
 	
+	/**
+	 * 2. Test display all operation
+	 */
 	@Test
 	@Order(2)
-	public void testSpecFetchAll()
-	{
-		
+	public void testSpecFetchAll() {
 		List<Specialization> list = repo.findAll();
-		
 		assertNotNull(list);
-		assertThat(list.size()>0);
-		if(list.isEmpty())
-		{
-			fail("no data exist in database ");
+		if(list.isEmpty()) {
+			fail("No data exist in Database");
 		}
 	}
 	
