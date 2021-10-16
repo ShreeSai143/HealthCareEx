@@ -15,33 +15,22 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="specialization_tab")
-public class Specialization {
-
+@Table(name="user_tab")
+public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="spec_id_col")
+	@Column(name="usr_id_col")
 	private Long id;
-
-	@Column(
-			name="spec_code_col",
-			length = 10,
-			nullable = false,
-			unique = true)
-	private String specCode;
-
-	@Column(
-			name="spec_name_col",
-			length = 60,
-			nullable = false,
-			unique = true)
-	private String specName;
-
-	@Column(
-			name="spec_note_col",
-			length = 250,
-			nullable = false)
-	private String specNote;
-
 	
+	@Column(name="usr_display_name_col")
+	private String displayName;
+	
+	@Column(name="usr_uname_col")
+	private String username;
+	
+	@Column(name="usr_upwd_col")
+	private String password;
+	
+	@Column(name="usr_urole_col")
+	private String role;
 }
