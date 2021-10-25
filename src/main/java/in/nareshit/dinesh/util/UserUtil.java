@@ -4,6 +4,9 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Component;
 
+// UUID :  Universal Unique IDentifier : UUID (String)
+
+
 @Component
 public class UserUtil {
 
@@ -14,3 +17,4 @@ public class UserUtil {
 				.substring(0, 8);
 	}
 }
+ 

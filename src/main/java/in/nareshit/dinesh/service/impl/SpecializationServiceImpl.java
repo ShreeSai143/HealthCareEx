@@ -13,7 +13,6 @@ import in.nareshit.dinesh.repo.SpecializationRepository;
 import in.nareshit.dinesh.service.ISpecializationService;
 import in.nareshit.dinesh.util.MyCollectionsUtil;
 
-
 @Service
 public class SpecializationServiceImpl implements ISpecializationService {
 	
@@ -73,5 +72,4 @@ public class SpecializationServiceImpl implements ISpecializationService {
 		Map<Long,String> map = MyCollectionsUtil.convertToMap(list);
 		return map;
 	}
-
 }

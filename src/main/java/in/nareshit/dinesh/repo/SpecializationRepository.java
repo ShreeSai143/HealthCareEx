@@ -1,6 +1,5 @@
 package in.nareshit.dinesh.repo;
 
-
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -10,7 +9,6 @@ import in.nareshit.dinesh.entity.Specialization;
 
 public interface SpecializationRepository extends JpaRepository<Specialization, Long> {
 
-	
 	@Query("SELECT COUNT(specCode) FROM Specialization  WHERE specCode=:specCode")
 	Integer getSpecCodeCount(String specCode);
 	
@@ -20,5 +18,4 @@ public interface SpecializationRepository extends JpaRepository<Specialization, 
 	@Query("SELECT id,specName FROM Specialization ")
 	List<Object[]> getSpecIdAndName();
 	
-
 }

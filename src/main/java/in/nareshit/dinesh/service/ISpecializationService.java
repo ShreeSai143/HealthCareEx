@@ -6,7 +6,7 @@ import java.util.Map;
 import in.nareshit.dinesh.entity.Specialization;
 
 public interface ISpecializationService {
- 
+
 	public Long saveSpecialization(Specialization spec);
 	public List<Specialization> getAllSpecializations();
 	public void removeSpecialization(Long id);
@@ -17,5 +17,4 @@ public interface ISpecializationService {
 	public boolean isSpecCodeExistForEdit(String specCode,Long id);
 	
 	Map<Long,String> getSpecIdAndName();
-	
 }

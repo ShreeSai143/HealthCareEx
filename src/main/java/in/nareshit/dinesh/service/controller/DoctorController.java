@@ -23,10 +23,9 @@ import in.nareshit.dinesh.util.MyMailUtil;
 @RequestMapping("/doctor")
 public class DoctorController {
 	
-	
 	@Autowired
 	private MyMailUtil mailUtil; 
-
+	
 	@Autowired
 	private IDoctorService service;
 	
@@ -57,7 +56,6 @@ public class DoctorController {
 			)
 	{
 		Long id = service.saveDoctor(doctor);
-		attributes.addAttribute("message", "Doctor ("+id+") is created");
 		String message = "Doctor ("+id+") is created";
 		attributes.addAttribute("message", message);
 		if(id!=null) {
@@ -67,7 +65,7 @@ public class DoctorController {
 							doctor.getEmail(), 
 							"SUCCESS", 
 							message,
-							new ClassPathResource("/static/myres/oracle.pdf"));
+							new ClassPathResource("/static/myres/sample.pdf"));
 				}
 			}).start();
 		}

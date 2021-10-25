@@ -37,7 +37,7 @@ public class SpecializationController {
 	/**
 	 * 2. On Submit Form save data
 	 */
-	@PostMapping("/save") 
+	@PostMapping("/save")
 	public String saveForm(
 			@ModelAttribute Specialization specialization,
 			Model model
@@ -90,7 +90,7 @@ public class SpecializationController {
 	 *     > Load Row as Object
 	 *     > Send to Edit Page
 	 *     > Fill in Form
-	 *  Else 
+	 *  Else
 	 *    > Redirect to all (Data Page)
 	 *    > Show Error message (Not found)     
 	 */

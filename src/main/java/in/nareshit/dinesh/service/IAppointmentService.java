@@ -5,7 +5,7 @@ import java.util.List;
 import in.nareshit.dinesh.entity.Appointment;
 
 /**
- * @author:DINESH SIR 
+ * @author:RAGHU SIR 
  *  Generated F/w:SHWR-Framework 
  */
 public interface IAppointmentService {
@@ -14,4 +14,5 @@ public interface IAppointmentService {
 	void deleteAppointment(Long id);
 	Appointment getOneAppointment(Long id);
 	List<Appointment> getAllAppointments();
+	List<Object[]> getAppoinmentsByDoctor(Long docId);
 }
